@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sihir — سياسة الخصوصية وشروط الاستخدام</title>
+<style>
+  :root {
+    --primary: #E07B27;
+    --primary-soft: #fdf0e4;
+    --text: #1f2024;
+    --text-muted: #6b6f76;
+    --bg: #ffffff;
+    --surface: #faf9f7;
+    --border: #ececec;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .container { max-width: 820px; margin: 0 auto; padding: 24px 20px 80px; }
+  header {
+    text-align: center;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .logo {
+    width: 72px; height: 72px;
+    background: var(--primary);
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  h1 { font-size: 24px; margin-bottom: 4px; }
+  .subtitle { color: var(--text-muted); font-size: 14px; }
+  .lang-tabs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .lang-tab {
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.2s;
+  }
+  .lang-tab.active {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+  .doc-tabs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .doc-tab {
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .doc-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+  .doc-content { display: none; }
+  .doc-content.active { display: block; }
+  h2 {
+    font-size: 20px;
+    margin: 28px 0 12px;
+    color: var(--primary);
+  }
+  h3 { font-size: 16px; margin: 20px 0 8px; }
+  p { margin-bottom: 12px; color: var(--text); }
+  ul { margin: 8px 0 16px; padding-inline-start: 24px; }
+  li { margin-bottom: 6px; }
+  .updated {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .contact-box {
+    background: var(--primary-soft);
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: 24px;
+  }
+  .contact-box strong { color: var(--primary); }
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  [dir="ltr"] { text-align: left; }
+  [dir="rtl"] { text-align: right; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">س</div>
+    <h1>Sihir · سحر</h1>
+    <p class="subtitle">Levantine Cuisine Delivery · توصيل المأكولات الشامية</p>
+  </header>
+
+  <div class="lang-tabs">
+    <div class="lang-tab active" onclick="setLang('ar')">العربية</div>
+    <div class="lang-tab" onclick="setLang('tr')">Türkçe</div>
+    <div class="lang-tab" onclick="setLang('en')">English</div>
+  </div>
+
+  <div class="doc-tabs">
+    <div class="doc-tab active" onclick="setDoc('privacy')" id="tab-privacy">🔒</div>
+    <div class="doc-tab" onclick="setDoc('terms')" id="tab-terms">📄</div>
+  </div>
+
+  <!-- ============ ARABIC ============ -->
+  <div class="lang-content active" id="lang-ar" dir="rtl">
+    <div class="doc-content active" id="ar-privacy">
+      <div class="updated">آخر تحديث: <span class="date"></span></div>
+      <h2>سياسة الخصوصية</h2>
+      <p>نحن في تطبيق "سحر" (Sihir) نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضّح هذه السياسة كيف نجمع بياناتك ونستخدمها ونحميها عند استخدامك للتطبيق.</p>
+
+      <h3>1. البيانات التي نجمعها</h3>
+      <ul>
+        <li><strong>بيانات الحساب:</strong> الاسم، رقم الهاتف، البريد الإلكتروني.</li>
+        <li><strong>بيانات التوصيل:</strong> عناوينك (الدولة، الولاية، المقاطعة، الحي، الشارع، تفاصيل المبنى).</li>
+        <li><strong>بيانات الطلبات:</strong> سجلّ طلباتك، تفاصيلها، وطريقة الدفع المختارة.</li>
+        <li><strong>بيانات تقنية:</strong> رمز الإشعارات، لغة الجهاز، معلومات أساسية عن الجهاز.</li>
+      </ul>
+
+      <h3>2. كيف نستخدم بياناتك</h3>
+      <ul>
+        <li>معالجة طلباتك وتوصيلها إلى عنوانك.</li>
+        <li>التواصل معك بخصوص طلباتك (إشعارات الحالة).</li>
+        <li>تحسين خدماتنا وتجربة الاستخدام.</li>
+        <li>الدعم الفني والرد على استفساراتك.</li>
+      </ul>
+
+      <h3>3. مشاركة البيانات</h3>
+      <p>لا نبيع بياناتك لأي طرف ثالث. قد نشارك بيانات التوصيل الضرورية (العنوان، الاسم، الهاتف) مع مندوب التوصيل المعيّن لطلبك فقط، لغرض إتمام التوصيل.</p>
+
+      <h3>4. حماية البيانات</h3>
+      <p>نستخدم تدابير أمنية تقنية لحماية بياناتك، وتُشفَّر كلمات المرور بحيث لا يمكن لأحد الاطلاع عليها. تُخزَّن البيانات على خوادم آمنة (Google Firebase).</p>
+
+      <h3>5. حقوقك</h3>
+      <p>وفقاً لقانون حماية البيانات الشخصية التركي (KVKK)، يحقّ لك الوصول إلى بياناتك، أو تصحيحها، أو طلب حذفها. للتواصل معنا بخصوص ذلك، استخدم وسائل التواصل أدناه.</p>
+
+      <h3>6. الاحتفاظ بالبيانات</h3>
+      <p>نحتفظ ببياناتك طالما حسابك نشط أو حسب ما تقتضيه المتطلبات القانونية والضريبية.</p>
+
+      <div class="contact-box">
+        <p><strong>للتواصل بخصوص الخصوصية:</strong></p>
+        <p>البريد الإلكتروني: sihirapp@gmail.com<br>واتساب: ‎+90 552 344 28 33</p>
+      </div>
+    </div>
+
+    <div class="doc-content" id="ar-terms">
+      <div class="updated">آخر تحديث: <span class="date"></span></div>
+      <h2>شروط الاستخدام</h2>
+      <p>باستخدامك تطبيق "سحر" (Sihir)، فإنك توافق على الشروط التالية. يُرجى قراءتها بعناية.</p>
+
+      <h3>1. الخدمة</h3>
+      <p>يوفّر "سحر" منصّة لطلب المأكولات وتوصيلها. نسعى لعرض معلومات دقيقة عن الأطباق والأسعار، لكن قد تحدث تغييرات دون إشعار مسبق.</p>
+
+      <h3>2. الحساب</h3>
+      <ul>
+        <li>يجب تقديم معلومات صحيحة عند التسجيل.</li>
+        <li>أنت مسؤول عن سرّية كلمة مرورك وعن جميع الأنشطة على حسابك.</li>
+        <li>يحقّ لنا تعليق أو إغلاق أي حساب يُساء استخدامه.</li>
+      </ul>
+
+      <h3>3. الطلبات والدفع</h3>
+      <ul>
+        <li>تُحسب أسعار الطلبات شاملةً رسوم التوصيل والضرائب المطبّقة.</li>
+        <li>طرق الدفع المتاحة: المحفظة داخل التطبيق، والدفع نقداً عند الاستلام.</li>
+        <li>بمجرد تأكيد الطلب وبدء تحضيره، قد لا يكون الإلغاء ممكناً.</li>
+      </ul>
+
+      <h3>4. الإلغاء والاسترجاع</h3>
+      <p>يمكن إلغاء الطلب قبل بدء تحضيره. بعد بدء التحضير، يُرجى التواصل مع الدعم لمناقشة الحالة. في حال وصول طلب خاطئ أو تالف، تواصل معنا فوراً وسنعالج الأمر.</p>
+
+      <h3>5. مسؤولية المستخدم</h3>
+      <ul>
+        <li>استخدام التطبيق لأغراض مشروعة فقط.</li>
+        <li>تقديم عنوان توصيل دقيق وصحيح.</li>
+        <li>عدم إساءة استخدام التطبيق أو محاولة الإضرار به.</li>
+      </ul>
+
+      <h3>6. حدود المسؤولية</h3>
+      <p>نسعى لتقديم خدمة موثوقة، لكننا لا نتحمّل المسؤولية عن التأخيرات الناتجة عن ظروف خارجة عن إرادتنا (الطقس، الازدحام، إلخ).</p>
+
+      <h3>7. تعديل الشروط</h3>
+      <p>قد نُحدّث هذه الشروط من وقت لآخر. استمرارك في استخدام التطبيق يعني موافقتك على الشروط المُحدّثة.</p>
+
+      <div class="contact-box">
+        <p><strong>للتواصل والدعم:</strong></p>
+        <p>البريد الإلكتروني: sihirapp@gmail.com<br>واتساب: ‎+90 552 344 28 33</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TURKISH ============ -->
+  <div class="lang-content" id="lang-tr" dir="ltr">
+    <div class="doc-content active" id="tr-privacy">
+      <div class="updated">Son güncelleme: <span class="date"></span></div>
+      <h2>Gizlilik Politikası</h2>
+      <p>"Sihir" uygulaması olarak gizliliğinize saygı duyuyor ve kişisel verilerinizi korumayı taahhüt ediyoruz. Bu politika, uygulamayı kullanırken verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.</p>
+
+      <h3>1. Topladığımız Veriler</h3>
+      <ul>
+        <li><strong>Hesap bilgileri:</strong> Ad, telefon numarası, e-posta.</li>
+        <li><strong>Teslimat bilgileri:</strong> Adresleriniz (ülke, il, ilçe, mahalle, sokak, bina detayları).</li>
+        <li><strong>Sipariş bilgileri:</strong> Sipariş geçmişiniz, detaylar ve seçilen ödeme yöntemi.</li>
+        <li><strong>Teknik veriler:</strong> Bildirim token'ı, cihaz dili, temel cihaz bilgileri.</li>
+      </ul>
+
+      <h3>2. Verilerinizi Nasıl Kullanırız</h3>
+      <ul>
+        <li>Siparişlerinizi işlemek ve adresinize teslim etmek.</li>
+        <li>Siparişleriniz hakkında sizinle iletişim kurmak (durum bildirimleri).</li>
+        <li>Hizmetlerimizi ve kullanıcı deneyimini geliştirmek.</li>
+        <li>Teknik destek ve sorularınızı yanıtlamak.</li>
+      </ul>
+
+      <h3>3. Veri Paylaşımı</h3>
+      <p>Verilerinizi üçüncü taraflara satmayız. Gerekli teslimat bilgilerini (adres, ad, telefon) yalnızca siparişinize atanan kurye ile, teslimatı tamamlamak amacıyla paylaşabiliriz.</p>
+
+      <h3>4. Veri Güvenliği</h3>
+      <p>Verilerinizi korumak için teknik güvenlik önlemleri kullanıyoruz; şifreler kimsenin göremeyeceği şekilde şifrelenir. Veriler güvenli sunucularda (Google Firebase) saklanır.</p>
+
+      <h3>5. Haklarınız</h3>
+      <p>Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca verilerinize erişme, düzeltme veya silinmesini talep etme hakkına sahipsiniz. Bunun için aşağıdaki iletişim kanallarını kullanın.</p>
+
+      <h3>6. Veri Saklama</h3>
+      <p>Verilerinizi hesabınız aktif olduğu sürece veya yasal ve vergisel gereklilikler doğrultusunda saklarız.</p>
+
+      <div class="contact-box">
+        <p><strong>Gizlilik için iletişim:</strong></p>
+        <p>E-posta: sihirapp@gmail.com<br>WhatsApp: +90 552 344 28 33</p>
+      </div>
+    </div>
+
+    <div class="doc-content" id="tr-terms">
+      <div class="updated">Son güncelleme: <span class="date"></span></div>
+      <h2>Kullanım Koşulları</h2>
+      <p>"Sihir" uygulamasını kullanarak aşağıdaki koşulları kabul etmiş olursunuz. Lütfen dikkatlice okuyun.</p>
+
+      <h3>1. Hizmet</h3>
+      <p>Sihir, yemek siparişi ve teslimatı için bir platform sunar. Yemekler ve fiyatlar hakkında doğru bilgi sunmaya çalışıyoruz, ancak önceden haber verilmeksizin değişiklikler olabilir.</p>
+
+      <h3>2. Hesap</h3>
+      <ul>
+        <li>Kayıt sırasında doğru bilgiler vermelisiniz.</li>
+        <li>Şifrenizin gizliliğinden ve hesabınızdaki tüm faaliyetlerden siz sorumlusunuz.</li>
+        <li>Kötüye kullanılan hesapları askıya alma veya kapatma hakkımız saklıdır.</li>
+      </ul>
+
+      <h3>3. Siparişler ve Ödeme</h3>
+      <ul>
+        <li>Sipariş fiyatları teslimat ücreti ve geçerli vergiler dahil hesaplanır.</li>
+        <li>Mevcut ödeme yöntemleri: uygulama içi cüzdan ve kapıda nakit ödeme.</li>
+        <li>Sipariş onaylanıp hazırlanmaya başlandığında iptal mümkün olmayabilir.</li>
+      </ul>
+
+      <h3>4. İptal ve İade</h3>
+      <p>Sipariş, hazırlanmaya başlanmadan önce iptal edilebilir. Hazırlık başladıktan sonra durumu görüşmek için lütfen destek ile iletişime geçin. Yanlış veya hasarlı sipariş durumunda hemen bizimle iletişime geçin, konuyu çözeceğiz.</p>
+
+      <h3>5. Kullanıcı Sorumluluğu</h3>
+      <ul>
+        <li>Uygulamayı yalnızca yasal amaçlarla kullanmak.</li>
+        <li>Doğru ve eksiksiz teslimat adresi vermek.</li>
+        <li>Uygulamayı kötüye kullanmamak veya zarar vermeye çalışmamak.</li>
+      </ul>
+
+      <h3>6. Sorumluluğun Sınırlandırılması</h3>
+      <p>Güvenilir bir hizmet sunmaya çalışıyoruz, ancak kontrolümüz dışındaki koşullardan (hava durumu, trafik vb.) kaynaklanan gecikmelerden sorumlu değiliz.</p>
+
+      <h3>7. Koşulların Değiştirilmesi</h3>
+      <p>Bu koşulları zaman zaman güncelleyebiliriz. Uygulamayı kullanmaya devam etmeniz, güncellenmiş koşulları kabul ettiğiniz anlamına gelir.</p>
+
+      <div class="contact-box">
+        <p><strong>İletişim ve destek:</strong></p>
+        <p>E-posta: sihirapp@gmail.com<br>WhatsApp: +90 552 344 28 33</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ENGLISH ============ -->
+  <div class="lang-content" id="lang-en" dir="ltr">
+    <div class="doc-content active" id="en-privacy">
+      <div class="updated">Last updated: <span class="date"></span></div>
+      <h2>Privacy Policy</h2>
+      <p>At "Sihir" we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and protect your data when you use the app.</p>
+
+      <h3>1. Data We Collect</h3>
+      <ul>
+        <li><strong>Account data:</strong> Name, phone number, email.</li>
+        <li><strong>Delivery data:</strong> Your addresses (country, state, district, neighborhood, street, building details).</li>
+        <li><strong>Order data:</strong> Your order history, details, and chosen payment method.</li>
+        <li><strong>Technical data:</strong> Notification token, device language, basic device information.</li>
+      </ul>
+
+      <h3>2. How We Use Your Data</h3>
+      <ul>
+        <li>To process your orders and deliver them to your address.</li>
+        <li>To communicate with you about your orders (status notifications).</li>
+        <li>To improve our services and user experience.</li>
+        <li>For technical support and answering your inquiries.</li>
+      </ul>
+
+      <h3>3. Data Sharing</h3>
+      <p>We do not sell your data to any third party. We may share necessary delivery data (address, name, phone) only with the courier assigned to your order, for the purpose of completing the delivery.</p>
+
+      <h3>4. Data Protection</h3>
+      <p>We use technical security measures to protect your data; passwords are encrypted so no one can view them. Data is stored on secure servers (Google Firebase).</p>
+
+      <h3>5. Your Rights</h3>
+      <p>Under the Turkish Personal Data Protection Law (KVKK), you have the right to access, correct, or request deletion of your data. To contact us regarding this, use the contact details below.</p>
+
+      <h3>6. Data Retention</h3>
+      <p>We retain your data as long as your account is active or as required by legal and tax obligations.</p>
+
+      <div class="contact-box">
+        <p><strong>Privacy contact:</strong></p>
+        <p>Email: sihirapp@gmail.com<br>WhatsApp: +90 552 344 28 33</p>
+      </div>
+    </div>
+
+    <div class="doc-content" id="en-terms">
+      <div class="updated">Last updated: <span class="date"></span></div>
+      <h2>Terms of Service</h2>
+      <p>By using the "Sihir" app, you agree to the following terms. Please read them carefully.</p>
+
+      <h3>1. The Service</h3>
+      <p>Sihir provides a platform for ordering and delivering food. We strive to display accurate information about dishes and prices, but changes may occur without prior notice.</p>
+
+      <h3>2. Account</h3>
+      <ul>
+        <li>You must provide accurate information when registering.</li>
+        <li>You are responsible for the confidentiality of your password and all activity on your account.</li>
+        <li>We reserve the right to suspend or close any misused account.</li>
+      </ul>
+
+      <h3>3. Orders and Payment</h3>
+      <ul>
+        <li>Order prices are calculated including delivery fees and applicable taxes.</li>
+        <li>Available payment methods: in-app wallet and cash on delivery.</li>
+        <li>Once an order is confirmed and preparation begins, cancellation may not be possible.</li>
+      </ul>
+
+      <h3>4. Cancellation and Refund</h3>
+      <p>An order can be cancelled before preparation begins. After preparation starts, please contact support to discuss the situation. In case of a wrong or damaged order, contact us immediately and we will resolve the matter.</p>
+
+      <h3>5. User Responsibility</h3>
+      <ul>
+        <li>Use the app for lawful purposes only.</li>
+        <li>Provide an accurate and correct delivery address.</li>
+        <li>Do not misuse the app or attempt to harm it.</li>
+      </ul>
+
+      <h3>6. Limitation of Liability</h3>
+      <p>We strive to provide a reliable service, but we are not liable for delays caused by circumstances beyond our control (weather, traffic, etc.).</p>
+
+      <h3>7. Changes to Terms</h3>
+      <p>We may update these terms from time to time. Your continued use of the app means you accept the updated terms.</p>
+
+      <div class="contact-box">
+        <p><strong>Contact and support:</strong></p>
+        <p>Email: sihirapp@gmail.com<br>WhatsApp: +90 552 344 28 33</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © <span class="year"></span> Sihir · سحر — All rights reserved
+  </footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+    event.target.classList.add('active');
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+  }
+  function setDoc(doc) {
+    document.querySelectorAll('.doc-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-content').forEach(lc => {
+      const id = lc.id.replace('lang-', '');
+      const target = document.getElementById(id + '-' + doc);
+      if (target) target.classList.add('active');
+    });
+    document.querySelectorAll('.doc-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + doc).classList.add('active');
+  }
+  // Set tab labels per language is simplified; set dates
+  const now = new Date();
+  const dateStr = now.toLocaleDateString();
+  document.querySelectorAll('.date').forEach(el => el.textContent = dateStr);
+  document.querySelectorAll('.year').forEach(el => el.textContent = now.getFullYear());
+</script>
+</body>
+</html>
